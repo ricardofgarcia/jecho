@@ -17,8 +17,11 @@ For the purpose of the `status summary roll up`, the statuses are ordered from *
 ### Sentiment Scoring Formula (Conceptual)
 
 The **Overall Sentiment Score** should be a weighted average calculated as:
+
 $$
+\begin{equation}
 \text{Overall Score} = \frac{\sum_{i=1}^{N} (\text{Text Sentiment}_i \times \text{Priority Multiplier}_i \times \text{Status Contribution}_i)}{\sum_{i=1}^{N} (\text{Priority Multiplier}_i \times \text{Status Contribution}_i)}
+\end{equation}
 $$
 
 $
