@@ -71,11 +71,8 @@ For each analysis you need to:
 
     The `Overall Sentiment Score` is a weighted average that is calculated as follows:
 
-      $$
-      \begin{equation}
-      \text{Overall Sentiment Score} = \frac{\sum_{i=1}^{N} (\text{Text Sentiment}_i \times \text{Priority Multiplier}_i \times \text{Status Contribution}_i)}{\sum_{i=1}^{N} (\text{Priority Multiplier}_i \times \text{Status Contribution}_i)}
-      \end{equation}
-      $$
+    ```latex
+\text{Overall Sentiment Score} = \frac{\sum_{i=1}^{N} (\text{Text Sentiment}_i \times \text{Priority Multiplier}_i \times \text{Status Contribution}_i)}{\sum_{i=1}^{N} (\text{Priority Multiplier}_i \times \text{Status Contribution}_i)}
 
     Where:
 
