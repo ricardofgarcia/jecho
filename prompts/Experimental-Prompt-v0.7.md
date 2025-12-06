@@ -71,8 +71,11 @@ For each analysis you need to:
 
     The `Overall Sentiment Score` is a weighted average that is calculated as follows:
 
-    ```latex
+$$
+\begin{equation}
 \text{Overall Sentiment Score} = \frac{\sum_{i=1}^{N} (\text{Text Sentiment}_i \times \text{Priority Multiplier}_i \times \text{Status Contribution}_i)}{\sum_{i=1}^{N} (\text{Priority Multiplier}_i \times \text{Status Contribution}_i)}
+\end{equation}
+$$
 
     Where:
 
@@ -216,12 +219,13 @@ issueFunction in issuesInEpics("issueFunction in portfolioChildrenOf('issuekey =
 ```
 
 ##### `Oldest Resolution Date`
-
+```
 (
 issuekey = [ISSUE_KEY] OR
 (issuefunction in portfolioChildrenOf("issuekey = [ISSUE_KEY]") AND (statusCategory in (Done) AND resolution = Done)) OR
 issueFunction in issuesInEpics("issueFunction in portfolioChildrenOf('issuekey = [ISSUE_KEY]')") AND (statusCategory in (Done) AND resolution = Done)
 ) order by resolutiondate ASC
+```
 
 ### Calculations
 
@@ -418,3 +422,20 @@ Use color emojis to represent colors in this template
   * **Delivery Date (computed):** *`Computed Delivery Date`*
   * **Issue Completion Velocity (computed):** *`Issue Completion Velocity`*
     **...**
+
+## *[CHILD-ISSUE-KEY-N](JIRA\_BASE\_URL/browse/CHILD-ISSUE-KEY-N) `Summary`*
+
+  * **Sentiment:** *[ Positive (🟢), Negative (🔴), Neutral (🔵) ]*
+  * **Justification:** *Why was this sentiment reached.*
+  * **Health Status:** *[ On Track (🟢), At Risk (🟡), Off Track (🔴) ]*
+  * **Justification:** *Why was this health status reached.*
+  * **Type:** *`Type`*
+  * **Status:** *`Status`*
+  * **Status Summary:** *`Status Summary`*
+  * **Status Summary (computed):** *`Computed Status Summary`*
+  * **Color Status:** *`Color Status`* On Track (🟢), At Risk (🟡), Off Track (🔴)
+  * **Color Status (computed):** *`Computed Color Status`* On Track (🟢), At Risk (🟡), Off Track (🔴)
+  * **Comments:** *A summary of the comments analyzed*
+  * **Target end Date:** *`Target end Date`*
+  * **Delivery Date (computed):** *`Computed Delivery Date`*
+  * **Issue Completion Velocity (computed):** *`Issue Completion Velocity`*
